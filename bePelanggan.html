@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/fontawesome/css/all.min.css">
+   <link rel="icon" href="favicon.ico">
+    <title>Pengaturan &#124; Indonesia Coder Development </title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="navbar navbar-expand-lg fixed-top navbar-light" 
+          style="background-color: #FFFACD">
+            <a class="navbar-brand" href="profil.html">
+              <img src="website13.png" width="70" height="70">
+              <img src="website12.png" width="150" height="50">
+            </a>
+        <form class="form-group form-inline col-sm-5 col-md-6 mt-3">
+          <div class="input-group" style="width: 100%">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <i class="fas fa-search text-primary"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+         <i class="fas fa-bell" href="#"></i>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-dark ml-3" href="#" id="navbarDropdown"
+                  role="button" data-toggle="dropdown" aria-haspopup="true" 
+                  aria-expanded="false">
+                    <img src="franki.jpg" width="40em" height="30em">Franky Johan Natama Lumbangaol
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="profil.html"><i class="fas fa-user mr-3 fa-fw"></i>Profil</a>
+                    <a href="user.html" class="dropdown-item"><i class="fas fa-video mr-3 fa-fw"></i>Watch</a>
+                    <a href="ebook.html" class="dropdown-item"><i class="fas fa-book mr-3 fa-fw"></i>Ebook</a>
+                    <a class="dropdown-item" href="bePelanggan.html"><i class="fas fa-wrench mr-3 fa-fw"></i>Setting</a>
+                    <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt mr-3 fa-fw"></i>Log Out</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!--tutup row-->
+      <div class="row" style="margin-top: 5.9em">
+        <div class="col-md-3" style="background-color:  #FFE4E1">
+          <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          <div class="sidebar-header d-flex align-items-center mt-4">
+              <img src="franki.jpg" width="110" height="110" class="rounded-circle">
+            <div class="title">
+              <h4 class="ml-3 mt-4">Franky Johan Natama Lumbangaol</h4>
+              <a href="#"><p class="ml-3 text-secondary"><i class="fas fa-edit"></i>Ubah Foto</p></a>
+            </div>
+          </div>
+          <hr>
+          <!-- Samping Kiri-->
+          <ul class="list-unstyled">
+            <a href="#dropdownDropdown" aria-expanded="false" data-toggle="collapse" class="text-dark mb-2"><i class="fas fa-user mr-2 fa-fw"></i><b>Akun Saya</b></a>
+              <ul id="dropdownDropdown" class="collapse list-unstyled" id="menu">
+                <li>
+                <a href="bePelanggan.html" class="menu"><i class="fas fa-cog fa-fw"></i><span class="ml-2">Edit Profil</span></a>
+                </li>
+                <li>
+                <a href="#" class="menu"><i class="fas fa-lock fa-fw"></i><span class="ml-2">Ubah Password</span></a>
+                </li>
+              </ul>
+              <hr>
+              <a href="editbuku.html" class="text-dark mb-2"><i  class="fas fa-book mr-2 fa-fw"></i><b>Ebook</b></a>
+              
+            </ul>
+        </nav>
+      </div>
+        <!-- Samping Kanan-->
+        <div class="col-md-6 offset-md-1">
+          <h3>
+          <i class="fas fa-cog mr-2" style="color:yellow"></i>
+          Edit Profil
+          </h3>
+
+
+         <form role="form" method="post">
+          <div class="form-group mt-3">
+            <label>Nama Lengkap</label>
+            <input type="text" class="form-control" 
+            placeholder="masukan nama anda........">
+          </div>
+          <div class="form-group">
+            <label>Nomor Handpone</label>
+            <input type="text" class="form-control" 
+            placeholder="masukan no hp anda........">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" 
+            placeholder="masukan email anda........">
+          </div>
+            <div class="form-group">
+            <label>Jenis Kelamin</label><br>
+            <input type="radio" name="jk"> Laki-laki<br>
+            <input type="radio" name="jk"> Perempuan
+          </div>
+          <div class="form-group">
+            <label>Tanggal Lahir</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Alamat</label>
+            <textarea class="form-control" 
+            placeholder="masukkan alamat anda.....">
+            </textarea>
+          </div>
+           <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" 
+            placeholder="masukan password anda........">
+          </div>
+          <button type="submit" class="btn btn-block"
+          style="background-color: #FF1493">
+            Edit Profil
+          </button>
+        </form>
+        </div>
+      </div><!-- tutup row-->
+      <!--FOOTER-->
+      <div class="row mt-4" style="background-color:#FFFACD; 
+    text-align: center; padding: .5em;">
+      <div class="col-md-12">
+        <small><i>&#64;2019 Copyright Indonesia Coder Developer</i></small>
+      </div>
+    </div>
+        </div><!--tutup container-->
+     
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
