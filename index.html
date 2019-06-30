@@ -7,10 +7,80 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="aldera.css">
     <link rel="stylesheet" href="bootstrap/fontawesome/css/all.min.css">
     <link rel="icon" href="favicon.ico">
     <title>Home &#124;Indonesia coder development</title>
+
+    <style type="text/css">
+      .open-button {
+  background-color: #0575E6;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 30px;
+  right: 28px;
+  width: 280px;
+}
+
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 20px;
+}
+
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+ 
+}
+
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+    </style>
   </head>
   <body>
   <div class="container-fluid">
@@ -20,57 +90,32 @@
           <a class="navbar-brand" href="index.html">
             <img src="website13.png" width="70" height="70" class="logoald">
             <img src="website12.png" width="200" height="50" class="logoald2">
-          </a>
+          </a>          
           <button class="navbar-toggler" type="button" data-toggle="collapse" 
           data-target="#navbarNavAltMarkup" aria-control="navbarNavAltMarkup" 
           aria-expanded="false" aria-label="Toggle Navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-         
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-left: 40em;">
-            <ul class="navbar-nav mr-auto">
-              <li class="navbar-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark ml-3" href="#" 
-                id="navbarNavAltMarkup" role="button" data-toggle="dropdown" 
-                aria-haspopup="true" aria-expanded="false">
-                Bantuan</a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Bantuan</a>
-                <a class="dropdown-item" href="#">FAQ</a>
-                </div>
-              </li>
-              <li class="navbar-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark ml-3" href="#" 
-                id="navbarNavAltMarkup" role="button" data-toggle="dropdown" 
+          </button>  
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <a class="nav-link text-dark ml-3" href="register.html" 
+                id="navbarNavAltMarkup" role="button"
                 aria-haspopup="true" aria-expanded="false">
                 Register</a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="register.html">Pelanggan</a>
-                </div>
-              </li>
-              <li class="navbar-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark ml-3" href="#" 
-                id="navbarNavAltMarkup" role="button" data-toggle="dropdown" 
+                <a class="nav-link  text-dark ml-3" href="login.html" 
+                id="navbarNavAltMarkup" role="button"  
                 aria-haspopup="true" aria-expanded="false">
                 Login</a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="login.html">Pelanggan</a>
-                <a class="dropdown-item" href="#">Admin</a>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </div><!--Tutup Row Navbar-->
+        </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-12" style="top:10em;text-align: center;">
+        <div class="col-md-12" style="top:20em;text-align: center;">
         <img src="html.png" class="img-responsive"><br>
           <h4>Tutorial HTML5</h4>
           </div>
+          
             <form class="form-group form-inline col-md-12 col-md-6 mt-3">
-              <div class="col-md-12" style="top:10em;">
+              <div class="col-md-12" style="top:20em;">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Cari Bahasa pemrograman yang ingin dipelajari">
                 <div class="input-group-btn">
@@ -82,17 +127,41 @@
             </div>
             </form>
       </div>
-      </div>
-      <div class="row mt-4" style="background-color:#FFFACD; 
-    text-align: center; padding: .5em;">
-      <div class="col-md-12">
+   <button class="open-button" onclick="openForm()">Tinggalkan Pesan</button>
+<div class="chat-popup" id="myForm">
+  <form action="#" class="form-container">
+    <h3>Halo Ada Masukan untuk website ini ...</h3>
+    <label for="msg"><b>Perkenalkan Diri Anda</b></label>
+    <input type="text" name="msg" placeholder="Nama/Email" required>
+    
+     <label for="msg"><b>Nomor Telepon</b></label>
+    <input type="text" placeholder="+628......." name="msg" required><br>
+     <label for="msg"><b>Pesan</b></label>
+    <textarea placeholder="Ketik......" name="msg" required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</div>
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-12" style="background-color:#FFFACD; 
+    text-align: center; padding: .5em; top: 50em;">
         <small><i>&#64;2019 Copyright Indonesia Coder Developer</i></small>
       </div>
-    </div>
-    </div><!--tutup Container-->
-
-
-
+   </div>
+ </div>
+    </div><!--tutup row-->
   </div> <!-- tutup container fluid -->
 
     <!-- Optional JavaScript -->
